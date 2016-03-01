@@ -1,0 +1,14 @@
+/* ----------------------------------------------------------------------------
+* Copyright &copy; 2016 Amber Pavlovich <amber.cook@csu.fullerton.edu>
+* Released under the [MIT License] (http://opensource.org/licenses/MIT)
+* ------------------------------------------------------------------------- */
+
+/**
+* --------------------program description-----------
+*Part 1: exceptions
+*Part 2: templates
+*Part 3: vectors, sets, and one other STL container
+*Part 4: Write as many of the following functions as you can in roughly 3 hours
+*Part 5: Rewrite the functions you wrote in Part 4 as iterative functions
+*Challenge: TO BE DEFINED
+*/
