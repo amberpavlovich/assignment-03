@@ -12,3 +12,32 @@
 *Part 5: Rewrite the functions you wrote in Part 4 as iterative functions
 *Challenge: TO BE DEFINED
 */
+
+//Part 1:-----------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using std::cout;
+using std::endl;
+using std::cin;
+
+int main() {
+	int y;
+	cout << "Enter a value between 1 and 100.\n";
+	
+	try {						//block of code that might mess up
+		cin >> y;
+		if (y < 1 || y > 100)
+		throw 99;
+	}
+	catch (int w) {		//handles the mess up
+		 {
+			 cout << "Number must be between 1 and 100. ERROR NUMBER: " << w << endl;
+		}
+	}
+
+
+	system("pause");
+	return 0;
+}
+
+//---------------------------------------------------------------------------------------------------------------
