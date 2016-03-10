@@ -16,12 +16,14 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <set>
 using std::cout;
 using std::endl;
 using std::cin;
 using std::string;
-#include <vector>
 using std::vector;
+using std::set;
 
 // Wtire a template for a fucntion that displays the contents of an array of any type
 template <class A>
@@ -42,6 +44,8 @@ int main() {
 			 cout << "Number must be between 1 and 100. ERROR NUMBER: " << w << endl;
 		}
 	}
+	cout << "----------------------------------------------";
+	cout << endl;
 //-------------------------------------------------------------------------------------------------------------------------------------
 // Part 2
 	int arr1[] = { 45, 5, 2 };
@@ -54,6 +58,8 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 		cout << arr2[i] << endl;
 		}
+	cout << "----------------------------------------------";
+	cout <<endl;
 //---------------------------------------------------------------------------------------------------------------------------------
 // Part 3
  vector<string> setA(10, "hi");  //setA is a vector with 10 elements that all contain "5"
@@ -64,6 +70,16 @@ int main() {
 	for (string element:setB) {
 		cout << element << endl;
 		}
+	cout <<endl;
+	
+	set<int> S = {100, 10, 80, 90, 70, 40, 30, 20, 50, 110, 60};
+	for (int e : S) {
+		cout << e << " " << endl;
+	}
+	
+	cout << "----------------------------------------------";
+	cout << endl;
+//-----------------------------------------------------------------------------------------------------------------------------------
 	system("pause");
 	return 0;
 }
