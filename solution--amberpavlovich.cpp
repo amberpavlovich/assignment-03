@@ -19,6 +19,9 @@
 using std::cout;
 using std::endl;
 using std::cin;
+using std::string;
+#include <vector>
+using std::vector;
 
 // Wtire a template for a fucntion that displays the contents of an array of any type
 template <class A>
