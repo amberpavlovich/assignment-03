@@ -52,6 +52,15 @@ int main() {
 		cout << arr2[i] << endl;
 		}
 //---------------------------------------------------------------------------------------------------------------------------------
+// Part 3
+ vector<string> setA(10, "hi");  //setA is a vector with 10 elements that all contain "5"
+	vector<string> setB(setA);
+	setB.push_back("y");
+
+	
+	for (string element:setB) {
+		cout << element << endl;
+		}
 	system("pause");
 	return 0;
 }
