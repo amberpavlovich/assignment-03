@@ -1,5 +1,6 @@
 /* ----------------------------------------------------------------------------
-* Copyright &copy; 2016 Amber Pavlovich <amber.cook@csu.fullerton.edu>, Bianca Baltazar <biancabalt@csu.fullerton.edu>
+* Copyright &copy; 2016 Amber Pavlovich <amber.cook@csu.fullerton.edu>, Bianca Baltazar <biancabalt@csu.fullerton.edu>, 
+Andrew Chen <chianchen@csu.fullerton.edu>
 * Released under the [MIT License] (http://opensource.org/licenses/MIT)
 * ------------------------------------------------------------------------- */
 
@@ -85,3 +86,88 @@ int main() {
 }
 
 //---------------------------------------------------------------------------------------------------------------
+//Part 4
+int gcd(int a, int b) {
+	if (a < 0) a *= -1;
+	if (b < 0) b *= -1;
+	if (a == 0 || b == 0) {
+		return (a == 0) ? b : a;
+	}
+	else
+		return gcd(a, b - a);
+}
+
+int fib(int n) {
+	if (n == 1)
+		return 1;
+	if (n == 2)
+		return 1;
+	else
+		return fib(n - 1) + fib(n - 2);
+}
+
+int pow(int a, int b) {
+	if (b == 0)
+		return 1;
+	else
+		return a * pow(a, b - 1);
+}
+
+int tri(int n) {
+	if (n == 1)
+		return 1;
+	else
+		return n + tri(n - 1);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// Part 5
+int gcd_iter(int a, int b) {
+	if (a == b)
+		return a;
+	else {
+		int gcd = 0;
+		while (b != 0) {
+			int t = a % b;
+			if (t == 0)
+				gcd = b;
+			a = b;
+			b = t;
+		}
+		return gcd;
+	}
+}
+
+int fib_iter(int n) {
+	if (n == 1)
+		return 1;
+	if (n == 2)
+		return 1;
+	else {
+		int n1 = 1;
+		int n2 = 1; 
+		int fib = 0;
+		for (int i = 3; i <= n; i++) {
+			fib = n1 + n2;
+			n1 = n2;
+			n2 = fib;
+		}
+		return fib;
+	}
+}
+
+int pow_iter(int a, int b) {
+	int amount = 1;
+	for (int i = 0; i < b; i++) {
+		amount *= a;
+	}
+	return amount;
+}
+
+int tri_iter(int n) {
+	int sum = 0;
+	for (int i = 1; i <= n; i++) {
+		sum += 1;
+	}
+	return sum;
+}
